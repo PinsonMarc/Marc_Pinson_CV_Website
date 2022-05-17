@@ -10,7 +10,7 @@ body {
   font-size: 14px;
   color: var(--text-color);
   display: grid;
-  grid-template-columns: 300px auto;
+  grid-template-columns: minmax(200px, 20%) minmax(200px, auto);
   grid-template-rows: 300px auto;
 }
 
@@ -22,8 +22,8 @@ aside {
 
 #profile-picture {
   border-radius: 50%;
-  margin: auto;
-  width:80%;
+  margin: 20px 15%;
+  width:70%;
   /* height:0; */
   /* padding-bottom: 50%; */
 } 
@@ -32,11 +32,57 @@ h1, h2, h3, h4, h5 {
   text-transform: uppercase;
 }
 
-ul {
+li img {
+  width: 20%;
+  height: auto;
+}
+
+li {
   display: inline;
+}
+
+h1 {
+  font-size: 4em;
+}
+
+h2{
+  font-size: 2em;
+}
+
+#first-name {
+  color: var(--identity-color);
 }
 
 .title-logo {
   width: 2em;
   height: 2em;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h2 {
+  background-color: var(--text-color);
+  color: var(--identity-color);
+  text-align: center;
+  font-size: 2em;
+}
+
+h4 {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 2em;
+}
+
+h5 {
+  font-size: 1.5em;
+}
+
+hr {
+  border-top: 4px solid var(--identity-color);
+}
+
+.bullet-point div {
+  display: inline;
 }
