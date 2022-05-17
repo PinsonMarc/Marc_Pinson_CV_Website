@@ -1,7 +1,10 @@
 :root {
-  --identity-color: rgb(202, 165, 0);
+  --identity-color: rgb(255, 216, 42);
   --text-color: rgb(46, 45, 45);
+  --standard-offset: 20px;
 }
+
+
 
 body {
   margin: 0px;
@@ -10,8 +13,8 @@ body {
   font-size: 14px;
   color: var(--text-color);
   display: grid;
-  grid-template-columns: minmax(200px, 20%) minmax(200px, auto);
-  grid-template-rows: 300px auto;
+  grid-template-columns: minmax(200px, 20%) minmax(300px, auto);
+  grid-template-rows: 1fr auto;
 }
 
 aside {
@@ -21,12 +24,21 @@ aside {
 }
 
 #profile-picture {
-  border-radius: 50%;
+  /* background-color: black; */
   margin: 20px 15%;
   width:70%;
+  height: 300px;
   /* height:0; */
   /* padding-bottom: 50%; */
 } 
+
+#profile-picture img{
+  width: 100%;
+  border-radius: 50%;
+  /* margin-top: ; */
+} 
+
+
 
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
@@ -62,6 +74,10 @@ h2{
 }
 
 h2 {
+  font-size: 2em;
+}
+
+h3 {
   background-color: var(--text-color);
   color: var(--identity-color);
   text-align: center;
@@ -76,13 +92,47 @@ h4 {
 }
 
 h5 {
-  font-size: 1.5em;
+  font-size: 1em;
 }
 
 hr {
-  border-top: 4px solid var(--identity-color);
+  border-top: 3px solid var(--identity-color);
+  margin-top: 0;
+  margin-bottom: 20px;
 }
 
 .bullet-point div {
   display: inline;
+}
+
+article{
+  margin:0 var(--standard-offset);
+}
+
+aside p{
+  padding: 0 var(--standard-offset);
+}
+
+header{
+  padding: 0 var(--standard-offset);
+  margin: 0px 0px;
+}
+
+header hr{
+  width: 150px;
+  position:absolute;
+}
+
+.bullet-point{
+  display: inline;
+}
+
+.event-description {
+  width: 20%;
+}
+
+@media screen and (min-width: 1200px) {
+  :root {
+    --standard-offset: 40px;
+  }
 }
