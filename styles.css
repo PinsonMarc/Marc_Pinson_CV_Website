@@ -11,7 +11,7 @@ body {
   font-size: 11px;
   color: var(--text-color);
   display: grid;
-  grid-template-columns: minmax(140px, 23%) auto;
+  grid-template-columns: minmax(140px, 20%) auto;
   grid-template-rows: 200px minmax(100vh, auto);
 }
 
