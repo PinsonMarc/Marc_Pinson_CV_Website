@@ -1,20 +1,23 @@
 :root {
   --identity-color: rgb(255, 216, 42);
   --text-color: rgb(46, 45, 45);
-  --standard-offset: 20px;
+  --standard-offset: 5px;
 }
-
-
 
 body {
   margin: 0px;
   padding: 0px;
   font-family: "Gill Sans", sans-serif;
-  font-size: 14px;
+  font-size: 11px;
   color: var(--text-color);
   display: grid;
-  grid-template-columns: minmax(200px, 20%) minmax(300px, auto);
-  grid-template-rows: 1fr auto;
+  grid-template-columns: minmax(140px, 23%) auto;
+  grid-template-rows: 200px minmax(100vh, auto);
+}
+
+p {
+  text-align: justify;
+  margin: 5px 0;
 }
 
 aside {
@@ -24,21 +27,20 @@ aside {
 }
 
 #profile-picture {
-  /* background-color: black; */
-  margin: 20px 15%;
-  width:70%;
-  height: 300px;
-  /* height:0; */
-  /* padding-bottom: 50%; */
+  margin-top: var(--standard-offset);
+  display: flex;
+  justify-content: center;
+  height: 135px;
 } 
 
 #profile-picture img{
-  width: 100%;
+  width:  135px;  
+  height: 100%;
+  box-sizing: border-box;
+  
+  border: 4px solid rgb(146, 132, 9);
   border-radius: 50%;
-  /* margin-top: ; */
 } 
-
-
 
 h1, h2, h3, h4, h5 {
   text-transform: uppercase;
@@ -53,59 +55,61 @@ li {
   display: inline;
 }
 
-h1 {
-  font-size: 4em;
-}
-
-h2{
-  font-size: 2em;
+ul {
+  padding-inline-start: var(--standard-offset);
 }
 
 #first-name {
   color: var(--identity-color);
 }
 
-.title-logo {
-  width: 2em;
-  height: 2em;
-  display: inline-flex;
-  justify-content: center;
-  align-items: center;
+h1 {
+  font-size: 3.5em;
+  margin-bottom: 0;
+  margin-top: 50px;
 }
 
-h2 {
-  font-size: 2em;
+h2{
+  font-size: 15px;
+  margin-bottom: 0;
+  margin-top: 5px;
 }
 
 h3 {
   background-color: var(--text-color);
   color: var(--identity-color);
   text-align: center;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 h4 {
-  display: inline-flex;
-  justify-content: center;
+  font-size: 1.2em;
+  margin: 0 10px;
+}
+
+.title-logo img{
+  width: 2em;
+  height: 2em;
+}
+
+.title-logo {
+  display: flex;
   align-items: center;
-  font-size: 2em;
+  height: 40px;
 }
 
 h5 {
-  font-size: 1em;
+  font-size: 0.8em;
+  margin: 0;
 }
 
 hr {
-  border-top: 3px solid var(--identity-color);
+  border-top: 2px solid var(--identity-color);
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 4em;
 }
 
-.bullet-point div {
-  display: inline;
-}
-
-article{
+article{ 
   margin:0 var(--standard-offset);
 }
 
@@ -115,24 +119,36 @@ aside p{
 
 header{
   padding: 0 var(--standard-offset);
-  margin: 0px 0px;
+}
+
+header div {
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
 }
 
 header hr{
-  width: 150px;
+  width: 6%;
   position:absolute;
 }
 
 .bullet-point{
-  display: inline;
+  display: flex;
+  margin-bottom: 30px;
+  
+}
+
+.event-settings {
+  width: 180px;
 }
 
 .event-description {
-  width: 20%;
+  flex : 1;
 }
 
-@media screen and (min-width: 1200px) {
+@media screen and (min-width: 800px) {
   :root {
-    --standard-offset: 40px;
+    --standard-offset: 30px;
   }
 }
